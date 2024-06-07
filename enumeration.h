@@ -307,7 +307,7 @@ void generateAN(const Graph *query_graph, ui *order, ui **&an, ui *&an_count) {
     }
 }
 
-VertexID identifying(const Graph *query_graph, ui *order, ui* candidates_count) {
+void identifying(const Graph *query_graph, ui *order, ui* candidates_count) {
     bool used[256];
     int N = query_graph->getVerticesCount();
     for (int i = 0; i < N; ++i) {
