@@ -9,7 +9,7 @@ Please cite our paper, if you use our source code.
 * "IVE: Accelerating Enumeration-based Subgraph Matching via Exploring Isolated Vertices. ICDE 2024."
 
 
-## Exection
+## Execution
 Execute the following command to run the program.
 ```bash
 make
