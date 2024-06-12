@@ -13,7 +13,7 @@ Please cite our paper, if you use our source code.
 Execute the following command to run the program.
 ```bash
 make
-./main -d ./data/tiny.graph -q ./data/tiny_query.graph -num 100000
+./main -d ./data/data.txt -q ./data/query.txt -num 100000
 ```
 
 ## Input
