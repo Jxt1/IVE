@@ -380,6 +380,7 @@ size_t explore(const Graph *data_graph, const Graph *query_graph, ui **candidate
     double avg_failing_set = 0;
     long long call_failing_set = 0;
 
+    auto start = std::chrono::high_resolution_clock::now();
     while (true) {
         while (idx[cur_depth] < idx_count[cur_depth]) {
             ui valid_idx = valid_candidate_idx[cur_depth][idx[cur_depth]];
@@ -477,6 +478,10 @@ size_t explore(const Graph *data_graph, const Graph *query_graph, ui **candidate
     }
     // Release the buffer.
     EXIT:
+
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duration = end - start;
+    printf("Enumeration Time(second): %f\n", duration.count());
 
     return embedding_cnt;
 }
